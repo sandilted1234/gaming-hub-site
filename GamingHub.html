@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Gaming Hub | Gear, Games & Mods</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for a modern, dark theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1f2937', // Dark Slate
+                        'secondary': '#374151', // Slightly lighter dark
+                        'accent': '#ef4444', // Red for accents (e.g., buttons, highlights)
+                        'text-light': '#f9fafb',
+                        'text-muted': '#9ca3af',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s infinite ease-in-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Apply smooth scrolling and global font */
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-primary text-text-light min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm shadow-xl border-b border-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo/Branding -->
+                <a href="#" class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-accent animate-pulse-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.152A1.5 1.5 0 0112 3.5v16.702a.5.5 0 01-.832.374l-6.26-4.706a1 1 0 010-1.637l6.26-4.706a.5.5 0 01.832.374zM12 3.5V21.5"></path></svg>
+                    <span class="text-2xl font-extrabold tracking-wider text-text-light">NEXUS<span class="text-accent">HUB</span></span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 font-medium">
+                    <a href="#games" class="text-text-muted hover:text-accent transition duration-300">Games</a>
+                    <a href="#mods" class="text-text-muted hover:text-accent transition duration-300">Mods & Tools</a>
+                    <a href="#hardware" class="text-text-muted hover:text-accent transition duration-300">Hardware</a>
+                    <a href="#peripherals" class="text-text-muted hover:text-accent transition duration-300">Peripherals</a>
+                </nav>
+
+                <!-- Search/Action Button -->
+                <button class="bg-accent hover:bg-red-600 text-text-light px-4 py-2 rounded-lg text-sm font-semibold transition duration-300 hidden sm:block">
+                    Search Gear
+                </button>
+
+                <!-- Mobile Menu Button (Hidden on Desktop) -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-light focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#games" class="block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-secondary">Games</a>
+                <a href="#mods" class="block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-secondary">Mods & Tools</a>
+                <a href="#hardware" class="block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-secondary">Hardware</a>
+                <a href="#peripherals" class="block px-3 py-2 rounded-md text-base font-medium text-text-light hover:bg-secondary">Peripherals</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Hero Section (Highlight) -->
+        <section class="text-center py-16 bg-secondary rounded-2xl shadow-2xl border border-accent/20">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                DOMINATE THE DIGITAL FRONTIER
+            </h1>
+            <p class="text-xl text-text-muted mb-8 max-w-2xl mx-auto">
+                Discover the latest releases, essential mods, and cutting-edge hardware to elevate your gaming experience.
+            </p>
+            <a href="#hardware" class="inline-block bg-accent hover:bg-red-600 text-text-light text-lg font-bold px-8 py-3 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                Explore The Gear
+            </a>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="pt-8">
+            <h2 class="text-4xl font-bold mb-10 border-b-2 border-accent pb-2 inline-block">Featured Games</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Game Card 1 -->
+                <div class="bg-secondary rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/600x400/1e293b/FFFFFF?text=SCI-FI+RPG+2025" onerror="this.src='https://placehold.co/600x400/1e293b/FFFFFF?text=Game+Image+1'" class="w-full h-48 object-cover" alt="Sci-Fi RPG 2025">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Echoes of Andromeda</h3>
+                        <p class="text-text-muted mb-4 text-sm">A vast open-world RPG with branching narratives and deep customization.</p>
+                        <span class="inline-block bg-accent/20 text-accent text-xs font-semibold px-3 py-1 rounded-full">New Release</span>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="bg-secondary rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/600x400/374151/FFFFFF?text=REAL-TIME+STRATEGY" onerror="this.src='https://placehold.co/600x400/374151/FFFFFF?text=Game+Image+2'" class="w-full h-48 object-cover" alt="Real-Time Strategy">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Warfront: Global Conflict</h3>
+                        <p class="text-text-muted mb-4 text-sm">Intense real-time strategy with dynamic environments and competitive multiplayer.</p>
+                        <span class="inline-block bg-accent/20 text-accent text-xs font-semibold px-3 py-1 rounded-full">PC Exclusive</span>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="bg-secondary rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition duration-300">
+                    <img src="https://placehold.co/600x400/1e293b/FFFFFF?text=FANTASY+ACTION" onerror="this.src='https://placehold.co/600x400/1e293b/FFFFFF?text=Game+Image+3'" class="w-full h-48 object-cover" alt="Fantasy Action">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">The Riven Veil</h3>
+                        <p class="text-text-muted mb-4 text-sm">Fast-paced, dark fantasy action game optimized for PS5 haptic feedback.</p>
+                        <span class="inline-block bg-accent/20 text-accent text-xs font-semibold px-3 py-1 rounded-full">PS5 Optimized</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mods Section -->
+        <section id="mods" class="pt-8">
+            <h2 class="text-4xl font-bold mb-10 border-b-2 border-accent pb-2 inline-block">Essential Mods & Tools</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Mod Card 1 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-accent/40 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Ultra Graphics Pack</h3>
+                    <p class="text-text-muted text-sm">Enhances texture resolution and draw distance for over 50 major titles.</p>
+                    <a href="#" class="text-accent hover:text-text-light text-sm font-medium mt-3 inline-block">Download Now &rarr;</a>
+                </div>
+                
+                <!-- Mod Card 2 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-accent/40 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">FPS Counter Overlay</h3>
+                    <p class="text-text-muted text-sm">Minimalist, non-intrusive performance monitoring tool for any PC game.</p>
+                    <a href="#" class="text-accent hover:text-text-light text-sm font-medium mt-3 inline-block">Details &rarr;</a>
+                </div>
+
+                <!-- Mod Card 3 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-accent/40 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Community Patches</h3>
+                    <p class="text-text-muted text-sm">Fixes persistent bugs and restores cut content in classic open-world games.</p>
+                    <a href="#" class="text-accent hover:text-text-light text-sm font-medium mt-3 inline-block">View List &rarr;</a>
+                </div>
+
+                <!-- Mod Card 4 -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg hover:shadow-accent/40 transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">VR Injector Tool</h3>
+                    <p class="text-text-muted text-sm">Experimental tool to add basic VR support to standard PC games (use at your own risk).</p>
+                    <a href="#" class="text-accent hover:text-text-light text-sm font-medium mt-3 inline-block">Learn More &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hardware Section (PC, Laptop, PS5) -->
+        <section id="hardware" class="pt-8">
+            <h2 class="text-4xl font-bold mb-10 border-b-2 border-accent pb-2 inline-block">Next-Gen Hardware</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- PC Build -->
+                <div class="bg-secondary rounded-xl shadow-lg p-6 border border-secondary hover:border-accent transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM6.5 9A1.5 1.5 0 005 10.5v3A1.5 1.5 0 006.5 15h7a1.5 1.5 0 001.5-1.5v-3A1.5 1.5 0 0013.5 9h-7zM8 12.5a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1zm6 0a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1z"></path></svg>
+                        The Apex PC Build
+                    </h3>
+                    <img src="https://placehold.co/600x350/111827/FFFFFF?text=CUSTOM+GAMING+PC" onerror="this.src='https://placehold.co/600x350/111827/FFFFFF?text=PC+Build'" class="w-full h-40 object-cover rounded-lg mb-4" alt="Custom Gaming PC">
+                    <ul class="space-y-2 text-text-muted text-sm">
+                        <li class="flex justify-between border-b border-primary pb-1">CPU: <span class="text-text-light">Intel i9-15900K</span></li>
+                        <li class="flex justify-between border-b border-primary pb-1">GPU: <span class="text-text-light">NVIDIA RTX 5090</span></li>
+                        <li class="flex justify-between border-b border-primary pb-1">RAM: <span class="text-text-light">64GB DDR5 8000MHz</span></li>
+                        <li class="flex justify-between">Storage: <span class="text-text-light">4TB NVMe Gen5</span></li>
+                    </ul>
+                    <button class="w-full mt-6 bg-accent/20 text-accent hover:bg-accent hover:text-text-light py-2 rounded-lg font-semibold transition duration-300">
+                        View Build Guide
+                    </button>
+                </div>
+
+                <!-- Gaming Laptop -->
+                <div class="bg-secondary rounded-xl shadow-lg p-6 border border-secondary hover:border-accent transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                        The Mobile Dominator
+                    </h3>
+                    <img src="https://placehold.co/600x350/374151/FFFFFF?text=ULTRA-SLIM+GAMING+LAPTOP" onerror="this.src='https://placehold.co/600x350/374151/FFFFFF?text=Laptop+Image'" class="w-full h-40 object-cover rounded-lg mb-4" alt="Ultra-Slim Gaming Laptop">
+                    <ul class="space-y-2 text-text-muted text-sm">
+                        <li class="flex justify-between border-b border-primary pb-1">Screen: <span class="text-text-light">16" 4K OLED, 240Hz</span></li>
+                        <li class="flex justify-between border-b border-primary pb-1">CPU: <span class="text-text-light">AMD Ryzen 9 9900HS</span></li>
+                        <li class="flex justify-between border-b border-primary pb-1">GPU: <span class="text-text-light">RTX 5080 Laptop</span></li>
+                        <li class="flex justify-between">Weight: <span class="text-text-light">4.5 lbs</span></li>
+                    </ul>
+                    <button class="w-full mt-6 bg-accent/20 text-accent hover:bg-accent hover:text-text-light py-2 rounded-lg font-semibold transition duration-300">
+                        Detailed Review
+                    </button>
+                </div>
+                
+                <!-- PS5 Console -->
+                <div class="bg-secondary rounded-xl shadow-lg p-6 border border-secondary hover:border-accent transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                        PlayStation 5 Pro
+                    </h3>
+                    <img src="https://placehold.co/600x350/1e293b/FFFFFF?text=PS5+PRO+CONSOLE" onerror="this.src='https://placehold.co/600x350/1e293b/FFFFFF?text=PS5+Image'" class="w-full h-40 object-cover rounded-lg mb-4" alt="PS5 Pro Console">
+                    <ul class="space-y-2 text-text-muted text-sm">
+                        <li class="flex justify-between border-b border-primary pb-1">CPU/GPU: <span class="text-text-light">Custom AMD Zen 4/RDNA 4</span></li>
+                        <li class="flex justify-between border-b border-primary pb-1">Storage: <span class="text-text-light">2TB Ultra-Fast SSD</span></li>
+                        <li class="flex justify-between border-b border-primary pb-1">Features: <span class="text-text-light">Ray Tracing 2.0, 8K Support</span></li>
+                        <li class="flex justify-between">Controller: <span class="text-text-light">DualSense Edge 2</span></li>
+                    </ul>
+                    <button class="w-full mt-6 bg-accent/20 text-accent hover:bg-accent hover:text-text-light py-2 rounded-lg font-semibold transition duration-300">
+                        Shop Accessories
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peripherals Section -->
+        <section id="peripherals" class="pt-8">
+            <h2 class="text-4xl font-bold mb-10 border-b-2 border-accent pb-2 inline-block">Pro-Grade Peripherals</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Peripheral Card 1: Mouse -->
+                <div class="bg-secondary rounded-xl p-4 text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/300x200/111827/FFFFFF?text=GAMING+MOUSE" onerror="this.src='https://placehold.co/300x200/111827/FFFFFF?text=Mouse'" class="w-full h-24 object-contain mb-3" alt="Gaming Mouse">
+                    <h4 class="text-lg font-semibold">Ergo-Pro X Mouse</h4>
+                    <p class="text-text-muted text-xs mb-3">Ultralight wireless, 32K DPI sensor.</p>
+                    <span class="text-accent font-bold">$149.99</span>
+                </div>
+
+                <!-- Peripheral Card 2: Keyboard -->
+                <div class="bg-secondary rounded-xl p-4 text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/300x200/374151/FFFFFF?text=MECHANICAL+KEYBOARD" onerror="this.src='https://placehold.co/300x200/374151/FFFFFF?text=Keyboard'" class="w-full h-24 object-contain mb-3" alt="Mechanical Keyboard">
+                    <h4 class="text-lg font-semibold">TKL Linear Keyboard</h4>
+                    <p class="text-text-muted text-xs mb-3">Hot-swappable switches, low-profile keys.</p>
+                    <span class="text-accent font-bold">$199.99</span>
+                </div>
+                
+                <!-- Peripheral Card 3: Headset -->
+                <div class="bg-secondary rounded-xl p-4 text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/300x200/111827/FFFFFF?text=GAMING+HEADSET" onerror="this.src='https://placehold.co/300x200/111827/FFFFFF?text=Headset'" class="w-full h-24 object-contain mb-3" alt="Gaming Headset">
+                    <h4 class="text-lg font-semibold">Aura 7.1 Headset</h4>
+                    <p class="text-text-muted text-xs mb-3">Spatial audio, noise-canceling mic.</p>
+                    <span class="text-accent font-bold">$249.99</span>
+                </div>
+
+                <!-- Peripheral Card 4: Monitor -->
+                <div class="bg-secondary rounded-xl p-4 text-center shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/300x200/374151/FFFFFF?text=GAMING+MONITOR" onerror="this.src='https://placehold.co/300x200/374151/FFFFFF?text=Monitor'" class="w-full h-24 object-contain mb-3" alt="Gaming Monitor">
+                    <h4 class="text-lg font-semibold">34" Ultrawide Monitor</h4>
+                    <p class="text-text-muted text-xs mb-3">5K resolution, 1ms response time.</p>
+                    <span class="text-accent font-bold">$999.00</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary mt-16 py-8 border-t border-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-muted">
+            <p>&copy; 2025 Nexus Gaming Hub. All rights reserved. | <span class="text-accent">Powering the Future of Gaming.</span></p>
+            <div class="flex justify-center space-x-4 mt-3 text-sm">
+                <a href="#" class="hover:text-text-light">Privacy Policy</a>
+                <a href="#" class="hover:text-text-light">Terms of Service</a>
+                <a href="#" class="hover:text-text-light">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
